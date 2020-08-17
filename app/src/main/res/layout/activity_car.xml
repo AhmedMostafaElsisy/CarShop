@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CarActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/carImgDetails"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/content_description_media"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/carModelOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:enabled="false"
+            android:hint="@string/CarModel"
+            app:helperText="@string/car_model_helper_text"
+            app:helperTextEnabled="true"
+            app:startIconDrawable="@drawable/ic_car">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/CarModelTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/carColorOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:enabled="false"
+            android:hint="@string/CarColor"
+            app:helperText="@string/car_color_helper_text"
+            app:helperTextEnabled="true"
+            app:startIconDrawable="@drawable/ic_color_pick">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/CarColorTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/carGasOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:enabled="false"
+            android:hint="@string/CarGas"
+            app:helperText="@string/car_gas_helper_text"
+
+            app:helperTextEnabled="true"
+            app:startIconDrawable="@drawable/ic_gas">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/CarGasTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/carDescOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:enabled="false"
+            android:hint="@string/CarDesc"
+            app:helperText="@string/car_desc_helper_text"
+
+            app:helperTextEnabled="true"
+            app:startIconDrawable="@drawable/ic_description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/CarDescTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/barDetails"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabAlignmentMode="end"
+        app:hideOnScroll="true"
+        app:navigationIcon="@drawable/ic_baseline_menu_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_edit"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/FAB_Color"
+        app:layout_anchor="@id/barDetails" />
+
+    <include layout="@layout/bottom_sheet" />|
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

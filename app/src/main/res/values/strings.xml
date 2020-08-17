@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CarShop</string>
+    <string name="content_description_media">just description the pic</string>
+    <string name="Description">LONG TEXTLONG TEXTLONG TEXTLONG TEXTLONG TEXTLONG TEXTLONG TEXTLONG TEXTLONG  TEXTLONG TEXT </string>
+
+
+    <string name="CarModel">Model</string>
+    <string name="CarColor">Color</string>
+    <string name="CarGas">Gas</string>
+    <string name="CarDesc">Description</string>
+    <string name="car_desc">Car Desc</string>
+    <string name="car_model_helper_text">car model</string>
+    <string name="car_color_helper_text">Car Color</string>
+    <string name="car_gas_helper_text">Car gas</string>
+    <string name="car_desc_helper_text">Car Description</string>
+</resources>
